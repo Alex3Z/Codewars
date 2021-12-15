@@ -7,35 +7,24 @@
     <title>Document</title>
 </head>
 <body>
-    
-<!-- Simple, given a string of words, return the length of the shortest word(s).
-
-String will never be empty and you do not need to account for different data types. -->
+    <!-- You get an array of numbers, return the sum of all of the positives ones.
+Example [1,-4,7,12] => 1 + 7 + 12 = 20
+Note: if there is nothing to sum, the sum is default to 0. -->
 
 <script>
-
-function findShort(s) {
-
-let arr=s.split(' ');
-
-let shortWord=30;
-for (i=0; i<arr.length;i++){
-if (arr[i].length<shortWord){
-    shortWord=arr[i].length;
-}
-
-}
-
-return shortWord;
-
-}
-
-console.log(findShort("Let's travel abroad shall we"));
-
-
-
-
-
-    </script>
+    function positiveSum(arr) {
+    let sum=0;
+      for (let a of arr)
+      if (a>0){
+      sum+=a;
+      } 
+       else if (arr=0){sum=0;
+              }
+      return sum;
+    }
+    console.log(positiveSum([-1,2,3,4,-5]));
+    
+     
+        </script>
 </body>
 </html>
