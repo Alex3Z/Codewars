@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
+
+// For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+
+
+function sumTwoSmallestNumbers(numbers) {
+
+let min1=Math.min(...numbers);
+console.log(min1);
+let index1=numbers.indexOf(min1);
+numbers.splice(index1,1);
+let min2=Math.min(...numbers);
+console.log(min2);
+sum=min1+min2;
+return sum;
+ 
+}
+let numbers=[19, 5, 42, 2, 77];
+console.log(sumTwoSmallestNumbers(numbers));
+
+
+
+    </script> 
+</body>
+</html>
